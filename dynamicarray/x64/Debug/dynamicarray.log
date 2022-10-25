@@ -1,0 +1,11 @@
+﻿  dynamicarray.cpp
+C:\Work\dftasks\dynamicarray\dynamicarray.cpp(12,25): error C2664: "int darry<int>::size_of(_t)": невозможно преобразовать аргумент 1 из "_t *" в "_t"
+          with
+          [
+              _t=int
+          ]
+C:\Work\dftasks\dynamicarray\dynamicarray.cpp(12,37): message : Не существует контекста, в котором такое преобразование возможно
+C:\Work\dftasks\dynamicarray\dynamicarray.cpp(18,9): message : см. объявление "darry<int>::size_of"
+C:\Work\dftasks\dynamicarray\dynamicarray.cpp(9): message : во время компиляции функции-члена класс шаблон "darry<int>::darry(int)"
+C:\Work\dftasks\dynamicarray\dynamicarray.cpp(51): message : выполняется компиляция ссылки на экземпляр шаблон функции "darry<int>::darry(int)"
+C:\Work\dftasks\dynamicarray\dynamicarray.cpp(51): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "darry<int>"
