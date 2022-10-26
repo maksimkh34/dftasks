@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 
 template <typename _t>
 
@@ -9,9 +9,14 @@ public:
     darry(int msize)
     {
         _size = msize;
-        for (int i = 0; i < size_of(darr); i++)
+        start(_size);
+    }
+
+    void clearArr(int size)
+    {
+        for (int i = 0; i < size; i++)
         {
-            darr[i] = {};
+            darr[i] = 0;
         }
     }
 
@@ -35,21 +40,35 @@ public:
         return darr[index];
     }
 
+    void setElem(int index, _t w)
+    {
+        darr[index] = w;
+    }
+
     void setSize(int size)
     {
         _size = size;
     }
 
+    _t* retArr()
+    {
+        return darr;
+    }
+
 private:
     size_t _size;
-    _t* darr = new _t[_size];
+    _t* darr;
+    void start(size_t sz)
+    {
+        darr = new _t[sz];
+    }
 };
 
 int main()
 {
-    int abc = 5;
     darry<int> object(5);
-    for (int i = 0; i < object.getSize(); i++)
+    object.clearArr(5);
+    for (size_t i = 0; i < object.getSize(); i++)
     {
         std::cout << object.getElem(i) << std::endl;
     }
